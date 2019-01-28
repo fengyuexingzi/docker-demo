@@ -23,6 +23,8 @@ services:
     hostname: demo_php-fpm
     container_name: demo_php-fpm
     build: ./php
+    ports:
+      - "9000:9000"
     volumes:
       - ./php/etc:/usr/local/etc
       - ./wwwroot:/var/www/html:rw
